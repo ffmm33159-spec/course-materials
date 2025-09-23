@@ -120,10 +120,3 @@ if __name__ == "__main__":
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_report_message))
     print("Bot is running. Press Ctrl+C to stop.")
     app.run_polling()
-    app.add_handler(MessageHandler(filters.ALL, print_chat_id))
-
-    app = ApplicationBuilder().token("8321747832:AAEv2ahKJu777s5wve9iHvSwIrix-QCpiy8").build()
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CallbackQueryHandler(handle_button))
-    print("Bot is running. Press Ctrl+C to stop.")
-    app.run_polling()
